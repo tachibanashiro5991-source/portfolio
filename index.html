@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>立花しろ | Illustration &amp; Story</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234E494F'/%3E%3Cpath d='M50 86 C32 70, 20 58, 20 45 C20 34, 29 28, 36 28 C42 28, 47 32, 50 38 C53 32, 58 28, 64 28 C71 28, 80 34, 80 45 C80 58, 68 70, 50 86 Z' fill='%23FAAEBB'/%3E%3Ccircle cx='50' cy='50' r='5.6' fill='%234E494F'/%3E%3Cpath d='M46.9 51 L53.1 51 L55.6 65 L44.4 65 Z' fill='%234E494F'/%3E%3C/svg%3E">
+
+<meta property="og:title" content="立花しろ | Illustration &amp; Story">
+<meta property="og:description" content="イラストレーター・立花しろの公式サイト。キャラクターデザインや挿絵を手がけています。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="root">
+
+  <!-- Sticky nav (appears on scroll) -->
+  <div id="sticky-nav" class="sticky-nav">
+    <a href="#top" class="sticky-nav__brand">
+      <span class="sticky-nav__name">立花しろ</span>
+      <span class="sticky-nav__romaji">Tachibana Shiro</span>
+    </a>
+    <nav class="sticky-nav__links">
+      <a href="#profile">プロフィール</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#sns">SNS</a>
+      <a href="#contact">問い合わせ</a>
+    </nav>
+  </div>
+
+  <!-- Hero / splash -->
+  <section id="top" class="hero">
+
+    <canvas id="hero-canvas" class="hero__canvas"></canvas>
+
+    <div id="img-garden" class="img-garden">
+      <div class="img-garden__cluster img-garden__cluster--l" data-imgcluster="L">
+        <img src="assets/img/futari-a.png" alt="">
+        <div class="img-garden__shade img-garden__shade--side-l"></div>
+        <div class="img-garden__shade img-garden__shade--top"></div>
+      </div>
+      <div class="img-garden__cluster img-garden__cluster--r" data-imgcluster="R">
+        <img src="assets/img/futari-b.png" alt="">
+        <div class="img-garden__shade img-garden__shade--side-r"></div>
+        <div class="img-garden__shade img-garden__shade--bottom"></div>
+      </div>
+    </div>
+
+    <div id="hero-content" class="hero__content">
+      <div id="hero-greet" class="hero__greet"></div>
+      <div class="hero__romaji">TACHIBANA&nbsp;&nbsp;SHIRO</div>
+      <h1 id="hero-name" class="hero__name">
+        <span class="hero__char">立</span><span class="hero__char">花</span><span class="hero__char hero__char--shi">し</span><span class="hero__char hero__char--ro">ろ</span>
+      </h1>
+      <div class="hero__rule"></div>
+      <div class="hero__tag">Illustration &amp; Story</div>
+      <nav class="hero__nav">
+        <a href="#profile"><span class="hero__nav-jp">プロフィール</span><span class="hero__nav-en">Profile</span></a>
+        <a href="#gallery"><span class="hero__nav-jp">ギャラリー</span><span class="hero__nav-en">Gallery</span></a>
+        <a href="#sns"><span class="hero__nav-jp">SNS</span><span class="hero__nav-en">Social</span></a>
+        <a href="#contact"><span class="hero__nav-jp">問い合わせ</span><span class="hero__nav-en">Contact</span></a>
+      </nav>
+      <a href="#profile" class="hero__scroll">SCROLL ↓</a>
+    </div>
+
+    <div id="hero-flash" class="hero__flash"></div>
+
+    <!-- Splash intro: heart-lock charm knockout -->
+    <div id="mask-intro" class="mask-intro">
+      <svg id="mask-svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" class="mask-intro__svg">
+        <defs>
+          <mask id="shiroNameMask">
+            <rect x="0" y="0" width="100%" height="100%" fill="#ffffff"></rect>
+            <g id="mask-charm">
+              <path d="M50 93 C29 74, 15 60, 15 45 C15 33, 25 27, 34 27 C41 27, 47 31, 50 37 C53 31, 59 27, 66 27 C75 27, 85 33, 85 45 C85 60, 71 74, 50 93 Z" fill="#000000"></path>
+              <path d="M39 43 L39 24 A11 11 0 0 1 61 24 L61 43" fill="none" stroke="#000000" stroke-width="7.5" stroke-linecap="round"></path>
+              <circle cx="50" cy="53" r="6.5" fill="#ffffff"></circle>
+              <path d="M46.4 54 L53.6 54 L56.5 71 L43.5 71 Z" fill="#ffffff"></path>
+            </g>
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="#4E494F" mask="url(#shiroNameMask)"></rect>
+      </svg>
+    </div>
+    <div id="paint-red" class="paint-red"></div>
+    <div id="sparkles" class="sparkles"></div>
+
+    <div id="switcher" class="switcher">
+      <button id="replay-btn" type="button" class="switcher__replay"><span class="switcher__icon">↻</span><span>もう一度</span></button>
+    </div>
+
+  </section>
+
+  <!-- Profile -->
+  <section id="profile" class="section">
+    <div class="section__heading">
+      <h2>プロフィール</h2>
+      <span class="section__heading-en">Profile</span>
+      <span class="section__rule"></span>
+    </div>
+    <div class="profile">
+      <div class="profile__portrait" role="img" aria-label="立花しろ ポートレート" style="background-image:url(assets/img/work-10.jpg)"></div>
+      <div class="profile__body">
+        <h3 class="profile__name">立花しろ</h3>
+        <div class="profile__romaji">Tachibana Shiro</div>
+        <div class="profile__social">
+          <a href="https://x.com/tachibanashiro8" target="_blank" rel="noopener" aria-label="X" title="X (旧Twitter)" class="icon-btn icon-btn--square">𝕏</a>
+          <a href="https://www.pixiv.net/users/6369320" target="_blank" rel="noopener" aria-label="pixiv" title="pixiv" class="icon-btn icon-btn--wide">pixiv</a>
+          <a href="https://www.youtube.com/@%E7%AB%8B%E8%8A%B1%E3%81%97%E3%82%8D" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube" class="icon-btn icon-btn--square">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.2 5 12 5 12 5s-6.2 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.8 19 12 19 12 19s6.2 0 7.84-.43A2.5 2.5 0 0 0 21.6 16.8 26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3Z"></path></svg>
+          </a>
+        </div>
+        <p class="profile__bio">セクシーな女の子や、儚い雰囲気のイラストを描いています。キャラクターデザインや挿絵を手がけ、YouTubeでは二次創作のアナログメイキングなどをゆるく発信中です。</p>
+        <dl class="profile__facts">
+          <dt>Work</dt><dd>キャラクターデザイン・挿絵</dd>
+          <dt>Like</dt><dd>梅のお菓子</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <div class="section__heading">
+      <h2>ギャラリー</h2>
+      <span class="section__heading-en">Gallery</span>
+      <span class="section__rule"></span>
+    </div>
+    <div id="gallery-scroll" class="gallery-scroll">
+      <div id="gallery-track" class="gallery-track">
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-1.jpg" alt="作品 1" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-2.jpg" alt="作品 2" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-3.jpg" alt="作品 3" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-4.jpg" alt="作品 4" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-5.jpg" alt="作品 5" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-6.jpg" alt="作品 6" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-7.jpg" alt="作品 7" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-8.jpg" alt="作品 8" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-9.jpg" alt="作品 9" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-gitem>
+          <div class="gallery-card" data-gcard>
+            <div class="gallery-card__zoom" data-zoomimg>
+              <img src="assets/img/work-10.jpg" alt="作品 10" loading="lazy" draggable="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="gallery-hint">drag to explore →</p>
+  </section>
+
+  <!-- SNS -->
+  <section id="sns" class="section">
+    <div class="section__heading">
+      <h2>SNS</h2>
+      <span class="section__heading-en">Social</span>
+      <span class="section__rule"></span>
+    </div>
+    <p class="section__lead">最新の作品や活動は、各SNSで発信しています。</p>
+    <div class="sns-grid">
+      <a href="https://x.com/tachibanashiro8" target="_blank" rel="noopener" class="sns-card">
+        <span class="sns-card__icon">𝕏</span>
+        <span class="sns-card__text"><span class="sns-card__title">旧Twitter</span><span class="sns-card__handle">@tachibanashiro8</span></span>
+      </a>
+      <a href="https://www.pixiv.net/users/6369320" target="_blank" rel="noopener" class="sns-card">
+        <span class="sns-card__icon sns-card__icon--pixiv">pixiv</span>
+        <span class="sns-card__text"><span class="sns-card__title">pixiv</span><span class="sns-card__handle">イラスト投稿</span></span>
+      </a>
+      <a href="https://tachibanashiro.fanbox.cc/" target="_blank" rel="noopener" class="sns-card">
+        <span class="sns-card__icon">ƒ</span>
+        <span class="sns-card__text"><span class="sns-card__title">FANBOX</span><span class="sns-card__handle">支援・限定作品</span></span>
+      </a>
+      <a href="https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG01066259.html" target="_blank" rel="noopener" class="sns-card">
+        <span class="sns-card__icon sns-card__icon--dl">DL</span>
+        <span class="sns-card__text"><span class="sns-card__title">DLsite</span><span class="sns-card__handle">作品販売</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="section__heading">
+      <h2>問い合わせ</h2>
+      <span class="section__heading-en">Contact</span>
+      <span class="section__rule"></span>
+    </div>
+    <p class="section__lead">お仕事のご依頼・ご質問は、こちらのフォームよりお気軽にどうぞ。</p>
+    <p class="contact-note">※ 版権作品（二次創作）のご依頼はお受けしかねます。あらかじめご了承ください。</p>
+    <p class="contact-mail-alt">
+      参考画像を添付したい方は、フォームではなく
+      <a href="mailto:tachibanashiro5991@gmail.com?subject=立花しろへのご連絡（ご依頼・お問い合わせ）">メールで直接送る</a>
+      をご利用ください。
+    </p>
+    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkolepld" method="POST">
+      <div class="contact-form__type" role="radiogroup" aria-label="お問い合わせ種別">
+        <label class="type-opt"><input type="radio" name="c-type" value="request" checked><span>ご依頼</span></label>
+        <label class="type-opt"><input type="radio" name="c-type" value="inquiry"><span>お問い合わせ</span></label>
+      </div>
+      <input id="c-name" type="text" name="お名前" placeholder="お名前">
+      <input id="c-email" type="email" name="email" placeholder="メールアドレス（必須）" aria-required="true">
+
+      <div class="contact-form__request" data-request-fields>
+        <label class="contact-field">
+          <span class="contact-field__label">依頼の種類<span class="contact-field__req">必須</span></span>
+          <select id="r-kind" name="依頼の種類">
+            <option value="" selected disabled>選択してください</option>
+            <option>キャラクターデザイン</option>
+            <option>挿絵</option>
+            <option>その他</option>
+          </select>
+        </label>
+        <div class="contact-field-row">
+          <label class="contact-field">
+            <span class="contact-field__label">用途<span class="contact-field__req">必須</span></span>
+            <select id="r-use" name="用途">
+              <option value="" selected disabled>選択してください</option>
+              <option>個人利用</option>
+              <option>商用利用</option>
+            </select>
+          </label>
+          <label class="contact-field">
+            <span class="contact-field__label">SNSでの実績公開<span class="contact-field__req">必須</span></span>
+            <select id="r-sns" name="SNSでの実績公開">
+              <option value="" selected disabled>選択してください</option>
+              <option>可</option>
+              <option>不可</option>
+            </select>
+          </label>
+        </div>
+        <label class="contact-field">
+          <span class="contact-field__label">内容・ご希望<span class="contact-field__req">必須</span></span>
+          <textarea id="r-detail" name="内容・ご希望" rows="4" placeholder="人数・構図・雰囲気など"></textarea>
+        </label>
+        <label class="contact-field">
+          <span class="contact-field__label">参考イメージ（URL）</span>
+          <input id="r-ref" type="text" name="参考イメージURL" placeholder="ギガファイル便・Googleドライブ・pixiv等のリンク">
+        </label>
+        <div class="contact-field-row">
+          <label class="contact-field">
+            <span class="contact-field__label">ご希望の納期</span>
+            <input id="r-due" type="text" name="ご希望の納期" placeholder="例：1ヶ月以内 / 特になし">
+          </label>
+          <label class="contact-field">
+            <span class="contact-field__label">ご予算</span>
+            <input id="r-budget" type="text" name="ご予算" placeholder="例：10,000円〜">
+          </label>
+        </div>
+        <label class="contact-field">
+          <span class="contact-field__label">お支払い方法<span class="contact-field__req">必須</span></span>
+          <select id="r-pay" name="お支払い方法">
+            <option value="" selected disabled>選択してください</option>
+            <option>銀行振込</option>
+            <option>PayPal</option>
+            <option>その他</option>
+          </select>
+        </label>
+        <label class="contact-field">
+          <span class="contact-field__label">その他・ご質問</span>
+          <textarea id="r-other" name="その他・ご質問" rows="3" placeholder="ご要望・ご質問など"></textarea>
+        </label>
+      </div>
+
+      <div class="contact-form__inquiry" data-inquiry-fields hidden>
+        <textarea id="c-msg" name="メッセージ" placeholder="メッセージ（必須）" rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="contact-form__submit">送信</button>
+    </form>
+    <div class="contact-links">
+      <a href="https://x.com/tachibanashiro8" target="_blank" rel="noopener">X</a>
+      <span>/</span>
+      <a href="https://www.pixiv.net/users/6369320" target="_blank" rel="noopener">pixiv</a>
+      <span>/</span>
+      <a href="https://tachibanashiro.fanbox.cc/" target="_blank" rel="noopener">FANBOX</a>
+      <span>/</span>
+      <a href="https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG01066259.html" target="_blank" rel="noopener">DLsite</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__name">立花しろ</div>
+    <div class="footer__romaji">TACHIBANA SHIRO</div>
+    <div class="footer__copy">© 2026 Tachibana Shiro. All rights reserved.</div>
+    <div class="footer__visits">これまでの来訪 <span id="visit-count">—</span> 回</div>
+  </footer>
+
+  <div class="grain"></div>
+  <canvas id="ripple-canvas" class="ripple-canvas"></canvas>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

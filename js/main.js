@@ -655,16 +655,22 @@
 
     replayBtn.addEventListener('click', startSplash);
 
-    // resizing (orientation change, window resize) replays the whole splash, matching the source design.
-    // mobile browsers also fire resize when the URL bar collapses on scroll — that only changes the
-    // height, so replay on width changes to avoid re-running the intro while someone is scrolling.
+    // On resize, just re-fit the hero canvas + ambient field to the new size.
+    // We deliberately do NOT replay the whole intro here: replaying on every resize
+    // step made the splash restart repeatedly (flicker) while dragging the window edge.
+    // Manual replay is still available via the "もう一度" button.
+    // (width-only guard also skips the height-only resize mobile browsers fire when the
+    // URL bar collapses on scroll.)
     var resizeTimer;
     var lastW = window.innerWidth;
     window.addEventListener('resize', function () {
       if (window.innerWidth === lastW) return;
       lastW = window.innerWidth;
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(startSplash, 200);
+      resizeTimer = setTimeout(function () {
+        sizeCanvas();
+        buildAmbient();
+      }, 200);
     });
 
     var started = false;

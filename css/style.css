@@ -106,12 +106,17 @@ body{ font-family:'Shippori Mincho',serif; }
 
 .hero__flash{ position:absolute; inset:0; z-index:5; pointer-events:none; opacity:0; background:radial-gradient(58% 50% at 50% 46%, rgba(255,252,253,0.9) 0%, rgba(250,174,187,0.5) 36%, rgba(250,174,187,0) 70%); }
 
-/* mobile: the side artwork sits behind the hero text (narrow screens leave no
-   text-free middle), so dim it and add text shadows to keep the menu readable */
+/* mobile: keep the side artwork at full colour, but lay a soft dark backdrop
+   *behind the hero text only* so the white menu stays readable over the images */
 @media (max-width:700px){
-  .img-garden__cluster::after{ content:''; position:absolute; inset:0; background:rgba(70,64,74,0.52); }
-  .hero__greet, .hero__romaji, .hero__tag, .hero__nav-jp, .hero__nav-en, .hero__scroll{ text-shadow:0 1px 10px rgba(43,39,46,0.9), 0 0 3px rgba(43,39,46,0.65); }
-  .hero__char{ text-shadow:0 2px 18px rgba(43,39,46,0.85); }
+  .hero__content::before{
+    content:''; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:120%; height:min(620px,90%);
+    background:radial-gradient(116% 56% at 50% 50%, rgba(34,30,38,0.82) 0%, rgba(34,30,38,0.64) 40%, rgba(34,30,38,0) 74%);
+    z-index:-1; pointer-events:none;
+  }
+  .hero__greet, .hero__romaji, .hero__tag, .hero__nav-jp, .hero__nav-en, .hero__scroll{ text-shadow:0 1px 6px rgba(26,23,29,0.85); }
+  .hero__char{ text-shadow:0 2px 14px rgba(26,23,29,0.75); }
 }
 
 /* splash: heart-lock charm knockout intro */

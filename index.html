@@ -13,7 +13,7 @@
 
 <link rel="canonical" href="https://tachibanashiro.com/">
 <meta property="og:title" content="立花しろ | Illustration &amp; Story">
-<meta property="og:description" content="イラストレーター・立花しろの公式サイト。キャラクターデザインや挿絵を手がけています。">
+<meta property="og:description" content="イラストレーター・立花しろの公式サイト。キャラクターデザインや動画サムネイル、MVイラストを手がけています。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tachibanashiro.com/">
 <meta property="og:image" content="https://tachibanashiro.com/assets/img/ogp.png">
@@ -32,7 +32,12 @@
       <span class="sticky-nav__name">立花しろ</span>
       <span class="sticky-nav__romaji">Tachibana Shiro</span>
     </a>
-    <nav class="sticky-nav__links">
+    <button id="sticky-nav-toggle" class="sticky-nav__toggle" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="sticky-nav-links">
+      <span class="sticky-nav__toggle-bar"></span>
+      <span class="sticky-nav__toggle-bar"></span>
+      <span class="sticky-nav__toggle-bar"></span>
+    </button>
+    <nav id="sticky-nav-links" class="sticky-nav__links">
       <a href="#profile">プロフィール</a>
       <a href="#gallery">ギャラリー</a>
       <a href="#sns">SNS</a>
@@ -97,10 +102,6 @@
     <div id="paint-red" class="paint-red"></div>
     <div id="sparkles" class="sparkles"></div>
 
-    <div id="switcher" class="switcher">
-      <button id="replay-btn" type="button" class="switcher__replay"><span class="switcher__icon">↻</span><span>もう一度</span></button>
-    </div>
-
   </section>
 
   <!-- Profile -->
@@ -122,9 +123,9 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.2 5 12 5 12 5s-6.2 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.8 19 12 19 12 19s6.2 0 7.84-.43A2.5 2.5 0 0 0 21.6 16.8 26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3Z"></path></svg>
           </a>
         </div>
-        <p class="profile__bio">セクシーな女の子や、儚い雰囲気のイラストを描いています。キャラクターデザインや挿絵を手がけ、YouTubeでは二次創作のアナログメイキングなどをゆるく発信中です。</p>
+        <p class="profile__bio">セクシーな女の子や、儚い雰囲気のイラストを描いています。キャラクターデザインや動画サムネイル、MVイラストを手がけ、YouTubeでは二次創作のアナログメイキングなどをゆるく発信中です。</p>
         <dl class="profile__facts">
-          <dt>Work</dt><dd>キャラクターデザイン・挿絵</dd>
+          <dt>Work</dt><dd>キャラクターデザイン・動画サムネイル・MVイラスト</dd>
           <dt>Like</dt><dd>梅のお菓子</dd>
         </dl>
       </div>
@@ -271,7 +272,8 @@
           <select id="r-kind" name="依頼の種類">
             <option value="" selected disabled>選択してください</option>
             <option>キャラクターデザイン</option>
-            <option>挿絵</option>
+            <option>動画サムネイル</option>
+            <option>MVイラスト</option>
             <option>その他</option>
           </select>
         </label>
@@ -308,7 +310,14 @@
           </label>
           <label class="contact-field">
             <span class="contact-field__label">ご予算</span>
-            <input id="r-budget" type="text" name="ご予算" placeholder="例：10,000円〜">
+            <select id="r-budget" name="ご予算">
+              <option value="" selected disabled>選択してください</option>
+              <option>1万円 〜 3万円</option>
+              <option>3万円 〜 5万円</option>
+              <option>5万円 〜 10万円</option>
+              <option>10万円以上</option>
+              <option>まずは相談したい</option>
+            </select>
           </label>
         </div>
         <label class="contact-field">

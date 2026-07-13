@@ -14,8 +14,6 @@
   var maskCharm = document.getElementById('mask-charm');
   var paintRed = document.getElementById('paint-red');
   var sparkles = document.getElementById('sparkles');
-  var switcher = document.getElementById('switcher');
-  var replayBtn = document.getElementById('replay-btn');
   var stickyNav = document.getElementById('sticky-nav');
   var rippleCanvas = document.getElementById('ripple-canvas');
   var visitEl = document.getElementById('visit-count');
@@ -170,9 +168,6 @@
     popName();
     heroContent.style.opacity = '1';
     heroContent.style.animation = 'heroRise 1.3s cubic-bezier(.2,.7,.2,1) forwards';
-    switcher.style.display = 'flex';
-    switcher.style.transition = 'opacity .8s ease';
-    switcher.style.opacity = '1';
   }
 
   // ---- splash intro: heart-lock charm knockout ----
@@ -304,6 +299,27 @@
       requestAnimationFrame(tick);
     }
     tick();
+  }
+
+  // ---- sticky nav hamburger menu (mobile) ----
+  function setupStickyMenu() {
+    var toggle = document.getElementById('sticky-nav-toggle');
+    if (!toggle) return;
+    function setOpen(open) {
+      stickyNav.classList.toggle('is-menu-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    toggle.addEventListener('click', function () {
+      setOpen(!stickyNav.classList.contains('is-menu-open'));
+    });
+    // tapping a menu link closes the panel (page then scrolls to the section)
+    [].forEach.call(stickyNav.querySelectorAll('.sticky-nav__links a'), function (a) {
+      a.addEventListener('click', function () { setOpen(false); });
+    });
+    // when the bar itself hides (scrolled back to top), close the panel too
+    window.addEventListener('scroll', function () {
+      if (!stickyNav.classList.contains('is-visible')) setOpen(false);
+    }, { passive: true });
   }
 
   // ---- sticky nav + hero parallax exit on scroll ----
@@ -647,18 +663,16 @@
   function init() {
     setupVisitCounter();
     setupRipple();
+    setupStickyMenu();
     setupScrollEffects();
     setupHeroParallax();
     setupSectionReveals();
     setupGallery();
     setupContactForm();
 
-    replayBtn.addEventListener('click', startSplash);
-
     // On resize, just re-fit the hero canvas + ambient field to the new size.
     // We deliberately do NOT replay the whole intro here: replaying on every resize
     // step made the splash restart repeatedly (flicker) while dragging the window edge.
-    // Manual replay is still available via the "もう一度" button.
     // (width-only guard also skips the height-only resize mobile browsers fire when the
     // URL bar collapses on scroll.)
     var resizeTimer;

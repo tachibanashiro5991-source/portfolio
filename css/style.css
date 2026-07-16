@@ -285,8 +285,6 @@ body{ font-family:'Shippori Mincho',serif; }
 .footer__name{ font-family:'Shippori Mincho',serif; font-weight:600; font-size:19px; color:#F4E7EB; letter-spacing:0.12em; }
 .footer__romaji{ font-family:'Cormorant Garamond',serif; font-style:italic; letter-spacing:0.24em; font-size:11px; color:#FAAEBB; margin-top:5px; }
 .footer__copy{ margin-top:20px; font-size:12px; letter-spacing:0.06em; }
-.footer__visits{ margin-top:11px; font-size:12px; letter-spacing:0.06em; }
-#visit-count{ color:#FAAEBB; font-weight:600; }
 
 /* ===== Overlays ===== */
 .grain{ position:fixed; inset:0; pointer-events:none; z-index:45; box-shadow:inset 0 0 240px 70px rgba(18,16,20,0.5); }

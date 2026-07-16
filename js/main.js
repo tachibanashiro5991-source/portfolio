@@ -16,7 +16,6 @@
   var sparkles = document.getElementById('sparkles');
   var stickyNav = document.getElementById('sticky-nav');
   var rippleCanvas = document.getElementById('ripple-canvas');
-  var visitEl = document.getElementById('visit-count');
 
   var W = 0, H = 0, ctx = null;
   var ambient = [];
@@ -241,18 +240,6 @@
     startTime = performance.now();
     loop(performance.now());
     playMaskIntro(theme);
-  }
-
-  // ---- visit counter ----
-  function setupVisitCounter() {
-    var v = 1;
-    try {
-      v = parseInt(localStorage.getItem('shiro_visits') || '0', 10);
-      v = (isNaN(v) ? 0 : v) + 1;
-      localStorage.setItem('shiro_visits', String(v));
-    } catch (e) {}
-    returning = v > 1;
-    if (visitEl) visitEl.textContent = v.toLocaleString();
   }
 
   // ---- mouse water-ripple trail ----
@@ -661,7 +648,6 @@
   }
 
   function init() {
-    setupVisitCounter();
     setupRipple();
     setupStickyMenu();
     setupScrollEffects();
